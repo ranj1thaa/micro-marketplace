@@ -8,13 +8,23 @@ const isProduction = process.env.NODE_ENV === "production";
 app.use(express.json())
 
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://micro-marketplace-drab.vercel.app"
-  ],
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  origin: function (origin, callback) {
+
+    const allowedOrigins = [
+      "http://localhost:5173",
+      "https://micro-marketplace-drab.vercel.app",
+      "https://micro-marketplace-git-main-ranjithas-projects-16e7ad6c.vercel.app"
+    ];
+
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.indexOf(origin) === -1) {
+      return callback(new Error("CORS not allowed for this origin"), false);
+    }
+
+    return callback(null, true);
+  },
+  credentials: true
 }));
 
 
