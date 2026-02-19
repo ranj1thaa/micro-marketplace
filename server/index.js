@@ -9,7 +9,7 @@ app.use(express.json())
 
 app.use(cors({
   origin: isProduction 
-    ? "https://micro-marketplace-rho.vercel.app"
+    ?  "https://micro-marketplace-odja.onrender.com/"
     : "http://localhost:5173",      
   credentials: true
 }));
