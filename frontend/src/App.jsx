@@ -3,12 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from './pages/auth/Login'
 import Signup from './pages/auth/Signup'
-import ProductDashboard from './pages/product/ProductDashboard';
-import EditProduct from './pages/product/EditProduct';
-import ProtectedRoute from './pages/Protected/ProtectedRoute';
-import Favorites from './pages/Favorites';
+import ProductDashboard from './pages/product/ProductDashboard'
+import EditProduct from './pages/product/EditProduct'
+import ProtectedRoute from './pages/Protected/ProtectedRoute'
+import Favorites from './pages/Favorites'
 import ProductDetails from './pages/product/ProductDetails';
-import NewProduct from './pages/product/NewProduct';
+import NewProduct from './pages/product/NewProduct'
 const App = () => {
   return (
     <div className='bodyy'>

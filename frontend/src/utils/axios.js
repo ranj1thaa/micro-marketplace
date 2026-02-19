@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL:"https://micro-marketplace-odja.onrender.com/",
+  baseURL: "http://localhost:3000"|| "https://micro-marketplace-odja.onrender.com/",
   withCredentials: true
 });
 
