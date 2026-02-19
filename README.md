@@ -7,22 +7,22 @@ Users can signup/login, browse products with search and pagination, view product
 Project Structure
 micro-marketplace/
 │
-├─ server/                   # Node.js + Express + MongoDB
-│   ├─ models/               # Mongoose models (User, Product)
-│   ├─ controllers/          # Business logic for Auth & Products
-│   ├─ routes/               # Express routes
-│   ├─ seed.js               # Seed script (2 users, 10 products)
-│   ├─ index.js              # Express app entry point
-│   ├─ server.js             # DB connection + server start
-│   └─ .env.example          # Environment variables example
+├─ server/ # Node.js + Express + MongoDB
+│ ├─ models/ # Mongoose models (User, Product)
+│ ├─ controllers/ # Business logic for Auth & Products
+│ ├─ routes/ # Express routes
+│ ├─ seed.js # Seed script (2 users, 10 products)
+│ ├─ index.js # Express app entry point
+│ ├─ server.js # DB connection + server start
+│ └─ .env.example # Environment variables example
 │
-├─ client/                   # React Web App
-│   ├─ src/
-│   │   ├─ pages/            # Login, Signup, ProductDashboard, ProductDetails, Favorites
-│   │   ├─ components/       # ProductFace, Navbar, ProtectedRoute
-│   │   └─ context/          # AppContext for user/global state
-│   ├─ utils/                # Axios instance
-│   └─ package.json
+├─ frontend/ # React Web App
+│ ├─ src/
+│ │ ├─ pages/ # Login, Signup, ProductDashboard, ProductDetails, Favorites
+│ │ ├─ components/ # ProductFace, Navbar, ProtectedRoute
+│ │ └─ context/ # AppContext for user/global state
+│ ├─ utils/ # Axios instance
+│ └─ package.json
 │
 └─ README.md
 
@@ -79,7 +79,7 @@ Server runs on http://localhost:3000
 
 Frontend
 Navigate to frontend:
-cd client
+cd frontend
 
 Install dependencies:
 npm install
@@ -91,29 +91,29 @@ App runs on http://localhost:5173
 
 API Endpoints
 Auth
-Method	Endpoint	Description
-POST	/auth/signup	Register new user
-POST	/auth/login	Login user
-POST	/auth/logout	Logout user
-GET	/auth/me	Get current user info
+Method Endpoint Description
+POST /auth/signup Register new user
+POST /auth/login Login user
+POST /auth/logout Logout user
+GET /auth/me Get current user info
 
 Products
-Method	Endpoint	Description
-GET	/product	Get all products (search + pagination)
-GET	/product/:id	Get single product details
-POST	/product/new	Create new product (admin/testing)
-POST	/product/:id/favorite	Toggle favorite for logged-in user
-PUT	/product/product/:id	Update product
-DELETE	/product/:id	Delete product
+Method Endpoint Description
+GET /product Get all products (search + pagination)
+GET /product/:id Get single product details
+POST /product/new Create new product (admin/testing)
+POST /product/:id/favorite Toggle favorite for logged-in user
+PUT /product/product/:id Update product
+DELETE /product/:id Delete product
 
 Test Credentials
-Name	  : Alice
-Email	  : alice@example.com
-Password: password123 
+Name : Alice
+Email : alice@example.com
+Password: password123
 
-Name	  : Bob
-Email	  : bob@example.com
-Password: password123 
+Name : Bob
+Email : bob@example.com
+Password: password123
 
 Micro-Interactions
 Heart icon click → scale + color change
@@ -123,7 +123,6 @@ Animated navbar brand
 
 Deployment
 Frontend: Vercel
-Backend: Render 
+Backend: Render
 
 After deployment, update the frontend api baseURL with deployed backend URL.
-
