@@ -8,11 +8,13 @@ const isProduction = process.env.NODE_ENV === "production";
 app.use(express.json())
 
 app.use(cors({
-  origin: isProduction 
-    ?  "https://micro-marketplace-odja.onrender.com/"
-    : "http://localhost:5173",      
+  origin: [
+    "http://localhost:5173",
+    "https://micro-marketplace-drab.vercel.app"
+  ],
   credentials: true
 }));
+
 app.use(cookieParser());
 
 app.use('/auth', authRoute)

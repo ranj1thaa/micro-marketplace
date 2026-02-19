@@ -15,8 +15,8 @@ exports.signup = WrapAsync(async (req, res) => {
   const token = tokens(user);
   res.cookie("accessToken", token, {
     httpOnly: true,
-    secure: isProduction,   
-    sameSite: isProduction ? "none" : "lax", 
+    secure: true,
+    sameSite: "none",
     maxAge: 15 * 60 * 1000,
   });
 
@@ -40,8 +40,8 @@ exports.login = WrapAsync(async (req, res) => {
   const token = tokens(user);
   res.cookie("accessToken", token, {
     httpOnly: true,
-    secure: isProduction,   
-    sameSite: isProduction ? "none" : "lax", 
+    secure: true,
+    sameSite: "none",
     maxAge: 15 * 60 * 1000,
   });
 
@@ -54,8 +54,8 @@ exports.login = WrapAsync(async (req, res) => {
 exports.logout = WrapAsync(async (req, res) => {
   res.clearCookie("accessToken", {
     httpOnly: true,
-    secure: isProduction,
-    sameSite: isProduction ? "none" : "lax",
+    secure: true,
+    sameSite: "none"
   });
 
   res.status(200).json({ message: "Logged out" });
