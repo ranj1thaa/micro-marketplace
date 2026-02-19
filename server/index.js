@@ -12,8 +12,11 @@ app.use(cors({
     "http://localhost:5173",
     "https://micro-marketplace-drab.vercel.app"
   ],
-  credentials: true
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 
 app.use(cookieParser());
 
