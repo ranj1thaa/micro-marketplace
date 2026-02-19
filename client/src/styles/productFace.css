@@ -1,0 +1,123 @@
+.product-card {
+  background: #f7f5f2 !important; 
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 350px; 
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.product-card-subtitle {
+  font-weight: 600;
+  color: #d81b60;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.product-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #800020;
+  margin-bottom: 5px;
+}
+
+.product-card-text {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.product-card img:hover {
+  transform: scale(1.03);
+}
+
+.product-card-buttons {
+  display: flex;
+  justify-content:center;
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.product-card-buttons button {
+  background: #d81b60;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+
+}
+
+.product-card-buttons button:hover {
+  background: #ff4081;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 90%;
+    padding: 12px;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+}
+.product-card-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+.detial{
+  width: 80%;
+  background-color: #fff;
+  margin: 40px auto;
+  padding: 50px 100px;
+}
+.detial h2{
+  text-align: center;
+  font-family: cursive;
+}
+
+.imgs{
+  width: 100%;
+  height: 400px;
+  min-width: 100%;
+  object-fit:fill;
+}
+
+.desc{
+  padding: 10px 0;
+  font-size: 18px;
+}
+.pri{
+  color: #d81b60;
+  font-size: 18px;
+}

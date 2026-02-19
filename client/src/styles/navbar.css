@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d3eaee;
+  padding: 20px 50px;
+  color: rgb(14, 13, 13);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color:#151414;
+  margin: 0;
+  margin-left: 700px;
+}
+
+.navbar-right button,
+.navbar-right a {
+  margin-left: 10px;
+}
