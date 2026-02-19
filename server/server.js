@@ -1,9 +1,14 @@
-require('dotenv').config()
-const Connect = require('./configs/db')
-const app=require('./index')
+require('dotenv').config();
+const Connect = require('./configs/db');
+const app = require('./index');
 
-Connect().then(()=>{
-  app.listen(process.env.PORT,()=>{
-    console.log(`port started on ${process.env.PORT}`)
+const PORT = process.env.PORT || 3000;
+
+Connect()
+  .then(() => {
+    app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
   })
-})
+  .catch((err) => {
+    console.error("Failed to connect to DB or start server:", err);
+    process.exit(1);
+  });

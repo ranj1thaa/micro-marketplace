@@ -4,13 +4,15 @@ const app=express()
 const cookieParser = require('cookie-parser');
 const authRoute=require('./routes/authRoute')
 const productRoute=require('./routes/productRoute')
-
+const isProduction = process.env.NODE_ENV === "production";
 app.use(express.json())
-app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true
-}))
 
+app.use(cors({
+  origin: isProduction 
+    ? "https://micro-marketplace-rho.vercel.app"
+    : "http://localhost:5173",      
+  credentials: true
+}));
 app.use(cookieParser());
 
 app.use('/auth', authRoute)
