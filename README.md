@@ -1,128 +1,284 @@
-Micro Marketplace App
-A full-stack micro marketplace application with Web (React) and Backend (Node.js + Express + MongoDB) support.
-Built as a Full Stack Developer Intern Assignment.
+<div align="center">
 
-Users can signup/login, browse products with search and pagination, view product details, and favorite/unfavorite products.
+<h1>🛒 Micro Marketplace App</h1>
 
-Project Structure
+<p>
+A full-stack micro marketplace application built with modern web technologies.
+</p>
+
+<p>
+Built as a Full Stack Developer Intern Assignment demonstrating authentication, product management, search & pagination, and user favorites functionality.
+</p>
+
+</div>
+
+---
+
+## 🚀 Overview
+
+<p>
+The Micro Marketplace App allows users to:
+</p>
+
+<ul>
+<li>✅ Signup / Login authentication</li>
+<li>✅ Browse products</li>
+<li>✅ Search products</li>
+<li>✅ Pagination support</li>
+<li>✅ View product details</li>
+<li>✅ Add/remove favorites</li>
+</ul>
+
+---
+
+## 🏗 Project Structure
+
+<pre>
 micro-marketplace/
 │
-├─ server/ # Node.js + Express + MongoDB
-│ ├─ models/ # Mongoose models (User, Product)
-│ ├─ controllers/ # Business logic for Auth & Products
-│ ├─ routes/ # Express routes
-│ ├─ seed.js # Seed script (2 users, 10 products)
-│ ├─ index.js # Express app entry point
-│ ├─ server.js # DB connection + server start
-│ └─ .env.example # Environment variables example
+├─ server/
+│ ├─ models/
+│ ├─ controllers/
+│ ├─ routes/
+│ ├─ seed.js
+│ ├─ index.js
+│ ├─ server.js
+│ └─ .env.example
 │
-├─ frontend/ # React Web App
+├─ frontend/
 │ ├─ src/
-│ │ ├─ pages/ # Login, Signup, ProductDashboard, ProductDetails, Favorites
-│ │ ├─ components/ # ProductFace, Navbar, ProtectedRoute
-│ │ └─ context/ # AppContext for user/global state
-│ ├─ utils/ # Axios instance
+│ │ ├─ pages/
+│ │ ├─ components/
+│ │ └─ context/
+│ ├─ utils/
 │ └─ package.json
 │
 └─ README.md
+</pre>
 
-Features
-Backend
-JWT-based authentication: Signup/Login/Logout
-CRUD for products: Create, Read, Update, Delete
-Search & Pagination: /product?search=&page=&limit=
-Favorites: Add/remove favorite products per user
-Validation, Status codes, Password Hashing
-Seed script with 2 users + 10 products
+---
 
-Web App (React)
-Login / Signup pages
-Product listing page with search + pagination
-Product detail page
-Favorite / unfavorite functionality
-Edit product page
-Clean, responsive UI with Bootstrap + Tailwind
+## ⚡ Features
 
-Micro-interactions using GSAP:
-Heart icon animation on favorite/unfavorite
-Product card hover lift & shadow
-Fade-in animation on page load
-Navbar brand animation
+<h3>🔐 Authentication</h3>
+<ul>
+<li>JWT based authentication</li>
+<li>Secure signup/login/logout</li>
+<li>Password hashing with bcrypt</li>
+</ul>
 
-Tech Stack
-Backend: Node.js, Express.js, MongoDB, Mongoose, JWT, bcrypt
-Frontend: React, React Router DOM, Axios, Bootstrap, Tailwind, React Toastify, GSAP
-Tools: VS Code, Postman
+<h3>📦 Product Management</h3>
+<ul>
+<li>CRUD operations for products</li>
+<li>Search + Pagination API support</li>
+<li>Product favorites system</li>
+</ul>
 
-Getting Started
-Backend
-Navigate to backend:
+<h3>🎨 Frontend Experience</h3>
+<ul>
+<li>Responsive UI using Bootstrap + Tailwind</li>
+<li>Animated micro-interactions using GSAP</li>
+<li>Product card hover animations</li>
+<li>Smooth page transitions</li>
+</ul>
+
+---
+
+## 💻 Tech Stack
+
+<h3>Backend</h3>
+<p>
+Node.js | Express.js | MongoDB | Mongoose | JWT | bcrypt
+</p>
+
+<h3>Frontend</h3>
+<p>
+React | React Router | Axios | Bootstrap | Tailwind CSS | React Toastify | GSAP
+</p>
+
+<h3>Tools</h3>
+<p>
+VS Code | Postman | Git | Render | Vercel
+</p>
+
+---
+
+## 🧠 Backend Features
+
+<ul>
+<li>JWT Authentication</li>
+<li>Product CRUD APIs</li>
+<li>Search & Pagination</li>
+<li>Favorites System</li>
+<li>Validation + Secure password storage</li>
+<li>Database seeding script</li>
+</ul>
+
+---
+
+## 🌐 Frontend Features
+
+<ul>
+<li>Login / Signup Pages</li>
+<li>Product Dashboard</li>
+<li>Product Details Page</li>
+<li>Favorites Management</li>
+<li>Responsive Layout</li>
+</ul>
+
+---
+
+## ✨ Micro Interactions
+
+<ul>
+<li>❤️ Heart icon animation on favorite toggle</li>
+<li>📦 Product card hover lift + shadow effects</li>
+<li>🌫 Smooth fade-in loading animations</li>
+<li>🎯 Navbar branding animation</li>
+</ul>
+
+---
+
+## 🛠 Getting Started
+
+<h3>Backend Setup</h3>
+
+<pre>
 cd server
-
-Install dependencies:
 npm install
+</pre>
 
-Create .env file based on .env.example:
+Create <b>.env</b> file using .env.example
+
+<pre>
 PORT=3000
-MONGOURI=your_mongodb_connection_string
-JWT_ACCESS_SECRET=your_jwt_secret
+MONGOURI=your_mongodb_uri
+JWT_ACCESS_SECRET=your_secret
 JWT_ACCESS_EXP=15m
 BASE_URL=http://localhost:5173
+</pre>
 
-Seed the database (creates 2 users + 10 products):
+Seed Database:
+<pre>
 node seed.js
+</pre>
 
-Start the server:
+Start Server:
+<pre>
 node server.js
+</pre>
 
-Server runs on http://localhost:3000
+Server runs on:
+<b>http://localhost:3000</b>
 
-Frontend
-Navigate to frontend:
+---
+
+<h3>Frontend Setup</h3>
+
+<pre>
 cd frontend
-
-Install dependencies:
 npm install
-
-Start the React dev server:
 npm run dev
+</pre>
 
-App runs on http://localhost:5173
+Frontend runs on:
+<b>http://localhost:5173</b>
 
-API Endpoints
-Auth
-Method Endpoint Description
-POST /auth/signup Register new user
-POST /auth/login Login user
-POST /auth/logout Logout user
-GET /auth/me Get current user info
+---
 
-Products
-Method Endpoint Description
-GET /product Get all products (search + pagination)
-GET /product/:id Get single product details
-POST /product/new Create new product (admin/testing)
-POST /product/:id/favorite Toggle favorite for logged-in user
-PUT /product/product/:id Update product
-DELETE /product/:id Delete product
+## 📡 API Endpoints
 
-Test Credentials
-Name : Alice
-Email : alice@example.com
+<h3>Auth</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>POST</td>
+<td>/auth/signup</td>
+<td>Register user</td>
+</tr>
+
+<tr>
+<td>POST</td>
+<td>/auth/login</td>
+<td>Login user</td>
+</tr>
+
+<tr>
+<td>GET</td>
+<td>/auth/me</td>
+<td>Get user info</td>
+</tr>
+</table>
+
+---
+
+<h3>Products</h3>
+
+<table border="1" cellpadding="8">
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>GET</td>
+<td>/product</td>
+<td>Search + Pagination</td>
+</tr>
+
+<tr>
+<td>GET</td>
+<td>/product/:id</td>
+<td>Product details</td>
+</tr>
+
+<tr>
+<td>POST</td>
+<td>/product/:id/favorite</td>
+<td>Toggle favorite</td>
+</tr>
+</table>
+
+---
+
+## 👤 Test Credentials
+
+<p>
+Name: Alice <br>
+Email: alice@example.com <br>
 Password: password123
+</p>
 
-Name : Bob
-Email : bob@example.com
+<p>
+Name: Bob <br>
+Email: bob@example.com <br>
 Password: password123
+</p>
 
-Micro-Interactions
-Heart icon click → scale + color change
-Product card hover → lift + shadow
-Smooth fade-in for products
-Animated navbar brand
+---
 
-Deployment
-Frontend: Vercel
-Backend: Render
+## 🚀 Deployment
 
-After deployment, update the frontend api baseURL with deployed backend URL.
+<p>
+Frontend → Vercel  
+Backend → Render
+</p>
+
+<p>
+After deployment update frontend API base URL.
+</p>
+
+---
+
+## ⭐ Author
+
+<p>
+Developed as an internship assignment project.
+</p>
